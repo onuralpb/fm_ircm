@@ -1,33 +1,25 @@
-import { useState } from "react";
 import "./modules/libs";
-import reactLogo from "./assets/svg/react.svg";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Container className="pageContainer text-center">
+      <Row className="appLayout justify-content-center align-items-center">
+        <Col className="d-flex justify-content-center align-items-center">
+          <Row className="appContainer">
+            <Col>
+              <Row className="appContent justify-content-center row-cols-auto align-items-center">
+                <Col>1 of 3</Col>
+                <Col>Variable width content</Col>
+                <Col>3 of 3</Col>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
