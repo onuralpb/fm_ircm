@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./modules/libs";
 import reactLogo from "./assets/svg/react.svg";
 import "./App.css";
 
