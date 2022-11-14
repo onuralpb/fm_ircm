@@ -1,0 +1,65 @@
+@mixin mq($breakpoint) {
+  $mq-xxxs: "(max-width: 320px)";
+  $mq-xxs: "(max-width: 375px)";
+  $mq-xs470: "(max-width: 470px)";
+  $mq-xs: "(max-width: 767px)";
+  $mq-sm: "(min-width: 768px) and (max-width: 991px)";
+  $mq-sm-min: "(min-width: 768px)";
+  $mq-sm-max: "(max-width: 991px)";
+  $mq-md: "(min-width: 992px) and (max-width: 1199px)";
+  $mq-md-min: "(min-width: 992px)";
+  $mq-md-max: "(max-width: 1199px)";
+  $mq-lg: "(min-width: 1200px)";
+
+  @if $breakpoint==xxxs {
+    @media #{$mq-xxxs} {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xxs {
+    @media #{$mq-xxs} {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xs470 {
+    @media #{$mq-xs470} {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xs {
+    @media #{$mq-xs} {
+      @content;
+    }
+  } @else if $breakpoint==sm {
+    @media #{$mq-sm} {
+      @content;
+    }
+  } @else if $breakpoint==sm-min {
+    @media #{$mq-sm-min} {
+      @content;
+    }
+  } @else if $breakpoint==sm-max {
+    @media #{$mq-sm-max} {
+      @content;
+    }
+  } @else if $breakpoint==md {
+    @media #{$mq-md} {
+      @content;
+    }
+  } @else if $breakpoint==md-min {
+    @media #{$mq-md-min} {
+      @content;
+    }
+  } @else if $breakpoint==md-max {
+    @media #{$mq-md-max} {
+      @content;
+    }
+  } @else if $breakpoint==lg {
+    @media #{$mq-lg} {
+      @content;
+    }
+  }
+}
