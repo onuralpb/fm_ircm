@@ -13,15 +13,73 @@ body {
     overflow: "hidden";
 
     .appContainer {
-      background: HSL(221, 19%, 16%);
       width: 410px;
       height: 410px;
       overflow: "hidden";
       color: #fff;
-      border-radius: 30px;
+
       .appContent {
+        position: relative;
+        margin: 20px;
         padding: 20px;
-        font-size: 15px;
+        background: HSL(221, 19%, 16%);
+        border-radius: 30px;
+        span {
+          background: HSL(214, 17%, 18%);
+          border-radius: 20px;
+          width: 40px;
+          height: 40px;
+          padding: 5px;
+          margin-bottom: 30px;
+          img {
+            width: 15px;
+            height: 15px;
+          }
+        }
+        h1 {
+          font-size: 26px;
+          color: hsl(0, 0%, 100%);
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 15px;
+          color: hsl(217, 12%, 63%);
+          margin-bottom: 35px;
+        }
+        .buttonList {
+          margin-bottom: 35px;
+          a {
+            background-color: HSL(214, 17%, 18%);
+            display: flex;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+            color: hsl(217, 12%, 63%);
+            text-decoration: none;
+            font-size: 17px;
+            &:hover {
+              background-color: HSL(217, 11%, 54%) !important;
+              color: #fff !important;
+            }
+            &:focus,
+            &:active,
+            &.active {
+              background-color: hsl(25, 97%, 53%) !important;
+              color: #fff !important;
+              outline: 0;
+            }
+          }
+        }
+        .btnSubmit {
+          font-size: 14px;
+        }
+        .btn-close {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+        }
       }
     }
   }
