@@ -11,9 +11,13 @@ import { ResultText } from "./components/ResultText";
 
 const App = () => {
   const [selectedPoint, setSelectedPoint] = useState(0);
+  console.log("selectedPoint: ", selectedPoint);
   const [voteStatus, setVoteStatus] = useState(false);
+  console.log("voteStatus: ", voteStatus);
   const [isDataLoading, setIsDataLoading] = useState(true);
+
   let voiting = 0;
+  console.log("voiting: ", voiting);
   const points = [1, 2, 3, 4, 5];
   useEffect(() => {
     let isDataLoading = true;
@@ -65,7 +69,9 @@ const App = () => {
                       size="lg"
                       className="btn-orange btnSubmit"
                       onClick={() => {
-                        setVoteStatus(true);
+                        if (selectedPoint !== 0) {
+                          setVoteStatus(true);
+                        }
                         voiting = 1;
                       }}
                     >
@@ -81,7 +87,10 @@ const App = () => {
                 type="button"
                 className="btn-close btn-close-white"
                 aria-label="Close"
-                onClick={() => setVoteStatus(false)}
+                onClick={() => {
+                  setSelectedPoint(0);
+                  setVoteStatus(false);
+                }}
               />
               <img src={Image.ThankyouImg} alt="Thank You" className="mb-4" />
               <ResultText
