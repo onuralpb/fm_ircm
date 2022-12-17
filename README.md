@@ -42,4 +42,4 @@ Users should be able to:
 ## Author
 
 - Website - [Onur Alp Baklaci](https://www.baklaci.net)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/onuralpb)
+- Frontend Mentor - [@onuralpb](https://www.frontendmentor.io/profile/onuralpb)
