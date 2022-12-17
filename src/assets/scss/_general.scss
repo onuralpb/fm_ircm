@@ -1,86 +1,131 @@
-html,
-body {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  background: HSL(228, 11%, 9%);
-  font-family: "Overpass";
-}
-.pageContainer {
-  .appLayout {
-    height: 100vh;
-    overflow: "hidden";
+.container {
+  .appContent {
+    width: 410px;
+    min-height: 410px;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 25px;
+    background: hsl(221, 19%, 16%);
+    border-radius: 30px;
+    @include media-breakpoint-only(xs) {
+      padding: 10px;
+      min-height: 350px;
+    }
+    .spinContent {
+      min-height: 360px;
 
-    .appContainer {
-      width: 410px;
-      height: 410px;
-      overflow: "hidden";
-      color: #fff;
-
-      .appContent {
-        position: relative;
-        margin: 20px;
-        padding: 20px;
-        background: HSL(221, 19%, 16%);
-        border-radius: 30px;
-        span {
-          background: HSL(214, 17%, 18%);
-          border-radius: 20px;
-          width: 40px;
-          height: 40px;
-          padding: 5px;
-          margin-bottom: 30px;
-          img {
-            width: 15px;
-            height: 15px;
-          }
-        }
-        h1 {
-          font-size: 26px;
-          color: hsl(0, 0%, 100%);
-          margin-bottom: 20px;
-        }
-        p {
-          font-size: 15px;
-          color: hsl(217, 12%, 63%);
-          margin-bottom: 35px;
-        }
-        .buttonList {
-          margin-bottom: 35px;
-          a {
-            background-color: HSL(214, 17%, 18%);
-            display: flex;
-            width: 44px;
-            height: 44px;
-            align-items: center;
-            justify-content: center;
-            border-radius: 22px;
-            color: hsl(217, 12%, 63%);
-            text-decoration: none;
-            font-size: 17px;
-            &:hover {
-              background-color: HSL(217, 11%, 54%) !important;
-              color: #fff !important;
-            }
-            &:focus,
-            &:active,
-            &.active {
-              background-color: hsl(25, 97%, 53%) !important;
-              color: #fff !important;
-              outline: 0;
-            }
-          }
-        }
-        .btnSubmit {
-          font-size: 14px;
-        }
-        .btn-close {
-          position: absolute;
-          right: 15px;
-          top: 15px;
+      .ball-pulse-sync {
+        & > div {
+          background-color: hsl(25, 97%, 53%);
+          height: 17px;
+          width: 17px;
+          margin: 2px;
         }
       }
     }
+
+    span {
+      background: hsl(214, 17%, 18%);
+      border-radius: 20px;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+      margin-bottom: 30px;
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    h1 {
+      font-size: 26px;
+      color: hsl(0, 0%, 100%);
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 15px;
+      color: hsl(217, 12%, 63%);
+      margin-bottom: 35px;
+    }
+
+    .buttonList {
+      margin-bottom: 35px;
+      padding: 0;
+
+      a {
+        transition-duration: 0.5s;
+        transition-property: color, background-color;
+        background-color: hsl(213, 19%, 18%);
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        color: hsl(217, 12%, 63%);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        &:hover {
+          background-color: hsl(217, 12%, 63%) !important;
+          color: hsl(0, 0%, 100%) !important;
+        }
+        &:focus,
+        &:active,
+        &.active {
+          background-color: hsl(25, 97%, 53%) !important;
+          color: hsl(0, 0%, 100%) !important;
+          outline: 0;
+          border: solid 2px hsl(25, 100%, 74%);
+        }
+      }
+    }
+    .btnSubmit {
+      font-size: 14px;
+      transition-duration: 0.6s;
+      transition-property: color, background-color;
+    }
+    .btn-close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+    &.resultPanel {
+      img {
+        margin-top: 20px;
+      }
+      .resultSpotContent {
+        margin-bottom: 30px;
+        margin-top: 10px;
+
+        .resultSpotTxt {
+          color: hsl(25, 97%, 53%);
+          background: hsl(213, 19%, 18%);
+          padding: 10px 20px;
+          border-radius: 30px;
+        }
+      }
+      p {
+        font-size: 15px;
+        color: hsl(217, 12%, 63%);
+        margin-bottom: 5px;
+        display: none;
+      }
+    }
+  }
+  footer {
+    .attribution {
+      font-size: 10px;
+      color: hsl(215, 18%, 27%);
+      a {
+        text-decoration: none;
+        color: hsl(231, 5%, 49%);
+        &:hover {
+          color: hsl(0, 0%, 62%);
+        }
+      }
+    }
+  }
+  .db {
+    display: block !important;
   }
 }

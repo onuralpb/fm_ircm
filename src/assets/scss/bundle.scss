@@ -1,4 +1,8 @@
-//Other CSS Libraries
+//Bootstrap SCSS Files for Inline Breakpoints
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
 // @import "~@fortawesome/fontawesome-free/css/fontawesome.min.css";
 // @import "~@fortawesome/fontawesome-free/css/solid.min.css";
 // @import "~animate.css/animate.min.css";

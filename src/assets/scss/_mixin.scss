@@ -1,3 +1,18 @@
+//Bootstrap 5 Breakpoints
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+// );
+// @include media-breakpoint-up(md) { ... }
+// @include media-breakpoint-down(md) { ... }
+// @include media-breakpoint-only(md) { ... }
+// @include media-breakpoint-between(md, xl) { ... }
+
+//Custom Breakpoints
 @mixin mq($breakpoint) {
   $mq-xxxs: "(max-width: 320px)";
   $mq-xxs: "(max-width: 375px)";

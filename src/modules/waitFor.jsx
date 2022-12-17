@@ -1,5 +1,5 @@
-const waitFor = (second) => {
+const WaitFor = (second) => {
   return new Promise((resolve) => setTimeout(resolve, second));
 };
 
-export default waitFor;
+export default WaitFor;

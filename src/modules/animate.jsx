@@ -36,6 +36,28 @@ export const addAnimatePro = (el, animation, speed, effect) => {
   });
 };
 
+export const addAnimateProFade = (el, animation, speed, effect) => {
+  return new Promise((resolve) => {
+    el.classList.add(
+      `db`,
+      `animate__animated`,
+      `animate__${animation}`,
+      `animate__${speed}`,
+      `${effect}`
+    );
+
+    el.addEventListener("animationend", () => {
+      el.classList.remove(
+        `animate__animated`,
+        `animate__${animation}`,
+        `animate__${speed}`,
+        `${effect}`
+      );
+      resolve("animationEnd");
+    });
+  });
+};
+
 export function addAnimatejQuery(el, animation, speed) {
   var dfd = $.Deferred();
 
