@@ -5,7 +5,6 @@ const Loader = () => {
         <div></div>
         <div></div>
         <div></div>
-        <h1></h1>
       </div>
     </div>
   );
