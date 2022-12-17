@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<img width="755" alt="Screen Shot 2022-12-17 at 13 12 18 PM" src="https://user-images.githubusercontent.com/1866388/208247062-ff2e30ba-7128-424b-84a8-43dc9d254819.png">
 
 ## My process
 
